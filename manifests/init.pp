@@ -24,7 +24,7 @@ class logwatch($logwatch_email = 'root', $frequency = 'weekly') {
     mode    => 0644,
     owner   => 'root',
     group   => 'root',
-    source  => 'puppet:///logwatch/ignore.conf',
+    source  => 'puppet:///modules/logwatch/ignore.conf',
     require => Package['logwatch'],
   }
 
@@ -33,7 +33,7 @@ class logwatch($logwatch_email = 'root', $frequency = 'weekly') {
     mode    => 0644,
     owner   => 'root',
     group   => 'root',
-    source  => 'puppet:///logwatch/override.conf',
+    source  => 'puppet:///modules/logwatch/override.conf',
     require => Package['logwatch'],
   }
 
